@@ -32,9 +32,9 @@ export const registerUser = async (req, res) => {
         // const avatar = await uploadOnCloudinary(avatarLocalPath);
         // console.log("avatar : " , avatar)
 
-        if (!avatar) {
-            return res.status(500).json({ success: false, message: "Something went wrong while uploading the avatar.." });
-        }
+        // if (!avatar) {
+        //     return res.status(500).json({ success: false, message: "Something went wrong while uploading the avatar.." });
+        // }
 
         const createUser = await userModel.create(
             {
