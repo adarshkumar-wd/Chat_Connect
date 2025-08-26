@@ -19,6 +19,9 @@ export const io = new Server(server, {
 socketInisializer(io)
 
 // console.log(" usersId : " , user)
+app.get("/", (req,res)=>{
+    res.send("Hello From Server");
+})
 
 
 dbConnection()
