@@ -8,11 +8,11 @@ const router = Router()
 // router.post("/register", upload.single("avatar") , registerUser)
 router.post("/register", registerUser)
 router.post("/login" , loginUser)
-router.get("/logout" , authUser , logoutUser)
+router.get("/logout", logoutUser)
 router.get("/get-user/:userId" , getUserById)
 router.get("/validate-token" , validateToken)
 router.get("/get-users/sender/:sender" , getAllUsers)
 router.get("/update-status/:userId"  , updateStatus)
-router.get("/get-user" , authUser , getUser )
+router.get("/get-user" , getUser )
 
 export default router
