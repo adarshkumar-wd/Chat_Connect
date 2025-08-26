@@ -1,7 +1,7 @@
 import { userModel } from "../models/user.model.js"
 import mongoose from "mongoose";
 import jwt from "jsonwebtoken";
-import { uploadOnCloudinary } from "../utils/cloudinary.js";
+// import { uploadOnCloudinary } from "../utils/cloudinary.js";
 
 export const registerUser = async (req, res) => {
 
@@ -22,14 +22,14 @@ export const registerUser = async (req, res) => {
             return res.status(400).json({ success: false, message: "Email already exist.." });
         }
 
-        const avatarLocalPath = req.file?.path
+        // const avatarLocalPath = req.file?.path
 
 
-        if (!avatarLocalPath) {
-            return res.status(400).json({ success: false, message: "Avatar is mandatory.." });
-        }
+        // if (!avatarLocalPath) {
+        //     return res.status(400).json({ success: false, message: "Avatar is mandatory.." });
+        // }
 
-        const avatar = await uploadOnCloudinary(avatarLocalPath);
+        // const avatar = await uploadOnCloudinary(avatarLocalPath);
         // console.log("avatar : " , avatar)
 
         if (!avatar) {
@@ -41,7 +41,7 @@ export const registerUser = async (req, res) => {
                 name: name,
                 email: email,
                 password: password,
-                avatar : avatar.url
+                // avatar : avatar.url
             }
         )
 
