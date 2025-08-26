@@ -39,7 +39,7 @@ const userSchema = new mongoose.Schema({
 
     avatar : {
         type : String,
-        require : [true , "Avatar is mandatory : user-model"]
+        // require : [false , "Avatar is mandatory : user-model"]
     },
 
     friends : [
