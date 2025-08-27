@@ -63,6 +63,10 @@ export const socketInisializer = (io) => {
             }
         })
 
+        socket.on("hello", (data) => {
+            socket.emit("return", data);
+        })
+
         socket.on("disconnect", async () => {
             const userId = userSocketMap[socket.id];
             console.log("userId : ", userId)
